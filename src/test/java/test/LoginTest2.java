@@ -68,7 +68,29 @@ public class LoginTest2 {
 
                 // Mensaje de error
                 String mensaje = loginPage2.obtenerMensajeError();
-                assertTrue(mensaje.contains("Pass incorrecto"), "El mensaje de error no es el esperado");
+                assertTrue(mensaje.contains("Epic sadface"), "El mensaje de error no es el esperado");
+        }
+
+        @Test
+        void loginCorrecto2() throws InterruptedException {
+
+                loginPage2.login("standard_user", "secret_sauce");
+
+                Thread.sleep(2000);
+
+                String urlActual = driver.getCurrentUrl();
+                assertTrue(urlActual.contains("inventory"), "La URL no es la esperada tras el login");
+        }
+
+        @Test
+        void loginIncorrecto2() throws InterruptedException {
+
+                loginPage2.login("standard_user", "password_incorrecto");
+
+                Thread.sleep(2000);
+
+                String mensaje = loginPage2.obtenerMensajeError();
+                assertTrue(mensaje.contains("Epic sadface"), "El mensaje de error no es el esperado");
         }
 
 
