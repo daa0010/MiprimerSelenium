@@ -11,10 +11,10 @@ MiprimerSelenium/
 │       └── java/
 │           ├── pages/          # Clases con la lógica de las páginas (POM) 
 │           │   ├── LoginPage.java
-│           │   └── LoginPage2.java # Clase que se pide en la tarea
+│           │   └── LoginPage2.java     # Clase que se pide en la tarea
 │           └── test/           # Clases que contienen los casos de prueba (JUnit)
 │               ├── LoginTest.java
-│               └── LoginTest2.java # Clase que se pide en la tarea
+│               └── LoginTest2.java     # Clase que se pide en la tarea
 ├── .gitignore                  # Archivos excluidos del control de versiones
 ├── pom.xml                     # Configuración de dependencias (Selenium 4.41, JUnit 5)
 └── README.md                   # Documentación del proyecto
